@@ -6,4 +6,5 @@ public class GeoParquestConstants {
     public static final String EdgesSpherical = "spherical";
     public static final String OrientationCounterClockwise = "counterClockwise";
     public static final String DefaultGeometryColumn = "geometry";
+    public static final String PRIMARY_COLUMN = "primary_column";
 }

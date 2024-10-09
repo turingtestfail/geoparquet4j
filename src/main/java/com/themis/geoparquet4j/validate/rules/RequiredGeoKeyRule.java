@@ -1,6 +1,5 @@
 package com.themis.geoparquet4j.validate.rules;
 
-
 import org.apache.parquet.hadoop.ParquetFileReader;
 import org.apache.parquet.hadoop.metadata.FileMetaData;
 import org.apache.parquet.hadoop.metadata.ParquetMetadata;
@@ -17,7 +16,7 @@ public class RequiredGeoKeyRule extends GenericRule {
     }
 
     @Override
-    public boolean validate(String value) throws IOException {
+    public boolean validate() throws IOException {
         ParquetMetadata metadata = reader.getFooter();
         FileMetaData fileMetaData = metadata.getFileMetaData();
         return fileMetaData.getKeyValueMetaData().containsKey(GeoParquestConstants.MetadataKey);
