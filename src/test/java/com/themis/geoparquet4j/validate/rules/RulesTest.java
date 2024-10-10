@@ -45,4 +45,11 @@ public class RulesTest {
         GeometryRepetitionRule rule = new GeometryRepetitionRule(reader);
         assertTrue(rule.validate());
     }
+
+    @Test
+    public void testGeometryTypeRule() throws Exception {
+        ParquetFileReader reader = getParquetFileReader();
+        GeometryDataTypeRule rule = new GeometryDataTypeRule(reader);
+        assertTrue(rule.validate());
+    }
 }

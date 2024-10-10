@@ -42,6 +42,14 @@ public abstract class GenericRule {
         }
         return false;
     }
+    public Type getType(String type){
+        for(Type t: types){
+            if(t.getName().equals(type)){
+                return t;
+            }
+        }
+        return null;
+    }
     public abstract boolean validate() throws IOException;
 
     public abstract String getErrorMessage();
