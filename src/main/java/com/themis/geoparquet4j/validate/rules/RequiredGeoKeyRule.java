@@ -5,7 +5,6 @@ import org.apache.parquet.hadoop.metadata.FileMetaData;
 import org.apache.parquet.hadoop.metadata.ParquetMetadata;
 
 import java.io.IOException;
-import java.util.Map;
 
 public class RequiredGeoKeyRule extends GenericRule {
 

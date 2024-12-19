@@ -52,4 +52,18 @@ public class RulesTest {
         GeometryDataTypeRule rule = new GeometryDataTypeRule(reader);
         assertTrue(rule.validate());
     }
+
+    @Test
+    public void testGeometryUngroupedRule() throws Exception {
+        ParquetFileReader reader = getParquetFileReader();
+        GeometryUngroupedRule rule = new GeometryUngroupedRule(reader);
+        assertTrue(rule.validate());
+    }
+
+    @Test
+    public void testOptionalEpochRule() throws Exception {
+        ParquetFileReader reader = getParquetFileReader();
+        OptionalEpochRule rule = new OptionalEpochRule(reader);
+        assertTrue(rule.validate());
+    }
 }
